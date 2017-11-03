@@ -27,6 +27,7 @@ export class StudentsAddComponent {
       student.penAmount--;
   }
   @ViewChild('fileInput') inputEl: ElementRef;
+  //add stu
   addStudent(student: Student) {
     let result: Student;
     console.log(student)

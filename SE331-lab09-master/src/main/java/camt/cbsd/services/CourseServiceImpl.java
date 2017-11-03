@@ -7,9 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * Created by Dto on 16-Apr-17.
- */
+
 @Service
 public class CourseServiceImpl implements CourseService {
     @Autowired

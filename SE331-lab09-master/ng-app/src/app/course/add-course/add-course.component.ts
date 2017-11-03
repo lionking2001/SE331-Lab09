@@ -17,14 +17,23 @@ export class AddCourseComponent implements OnInit {
 
   }
 
+
+
   addCourse(course:Course){
-    this.courseService.addCourse(course)
-      .subscribe(result =>{
+    let result: Course;
+    this.courseService.addCourse(course).subscribe(resultCourse => {
+        result = resultCourse;
         if (result != null){
-          this.router.navigate(['/courses'],{queryParams:{result:'addSuccess'}})
+          this.router.navigate(['/list']);
         }else{
-          alert('Error in adding the student');
+          alert("Error in adding the Course");
         }
-      })
-  }
+      });
+    }
+
+
+
+
+
+
 }
